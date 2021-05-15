@@ -1,0 +1,44 @@
+#include <iostream>
+
+using namespace std;
+int area(int a,int b)
+{
+    cout<<"THE AREA OF RECTANGLE IS="<<a*b;
+}
+double area(double r)
+{
+    cout<<"THE AREA OF CIRCLE IS="<<3.14*r*r;
+}
+double area(double a,double b)
+{
+    cout<<"THE AREA OF TRIANGLE IS="<<0.5*a*b;
+}
+int main()
+{
+    int n;
+    cout<<"ENTER 1 FOR RECTANGLE ,2 FOR CIRCLE AND 3 FOR TRIANGLE\n";
+    cin>>n;
+    if(n==1)
+    {
+        int a,b;
+        cout<<"enter the values of l and b";
+        cin>>a>>b;
+        area(a,b);
+    }
+    else if(n==2)
+    {
+        double r;
+        cout<<"enter the value of radius\n";
+        cin>>r;
+        area(r);
+    }
+    else if(n==3)
+    {
+        double a,b;
+        cout<<"enter the values of height and length";
+        cin>>a>>b;
+        area(a,b);
+    }
+
+    return 0;
+}
