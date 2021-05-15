@@ -1,0 +1,61 @@
+#include <iostream>
+
+using namespace std;
+class calculator
+{
+    double num1,num2;
+public:
+    void get()
+    {
+        cout<<"enter the two numbers\n";
+        cin>>num1>>num2;
+    }
+    double add()
+    {
+        return num1+num2;
+    }
+    double diff()
+    {
+        return num1-num2;
+    }
+    double div()
+    {
+        return num1/num2;
+    }
+    double multi()
+    {
+        return num1*num2;
+    }
+};
+
+int main()
+{
+calculator ob;
+int op;
+cout<<"enter 1 for addition\n 2 for subtraction\n 3 for division\n 4 for multiplication\n";
+cin>>op;
+switch(op)
+{
+    case 1:
+        ob.get();
+        cout<<"the sum is="<<ob.add();
+        break;
+    case 2:
+        ob.get();
+        cout<<"the difference is="<<ob.diff();
+        break;
+    case 3:
+        ob.get();
+        cout<<"the quotient is="<<ob.div();
+        break;
+    case 4:
+        ob.get();
+        cout<<"the product is="<<ob.multi();
+        break;
+    default:
+        cout<<"invalid entry";
+        break;
+        
+}
+return 0;
+}
